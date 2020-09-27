@@ -1,0 +1,11 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: provider-movie-service
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka/ #将当前服务发布到指定的注册中心
+  instance:
+    prefer-ip-address: true

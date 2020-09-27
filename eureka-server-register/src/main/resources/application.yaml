@@ -1,0 +1,15 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server-register
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #注册中心需要将两个参数设置成false
+    fetch-registry: false
+    service-url:  #进行服务发布时，使用这个url
+       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+
